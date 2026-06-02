@@ -1,0 +1,27 @@
+trigger:
+  branches:
+    include:
+      - live
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+- group: OVSX
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '24.x'
+    displayName: 'Install Node.js'
+
+  - script: npm install
+    displayName: 'Install dependencies'
+
+  - script: npm run compile
+    displayName: 'Compile extension'
+
+  - script: npm run publish
+    displayName: 'Publish to Open VSX'
+    env:
+      OVPAT: $(OVPAT)

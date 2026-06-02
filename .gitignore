@@ -1,0 +1,11 @@
+.vscode-test
+dist
+node_modules
+*.vsix
+
+token.json
+.serena/*
+.vscode/*
+resources/credentials.json
+.vscode/chat.json
+.env
