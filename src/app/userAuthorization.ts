@@ -13,7 +13,7 @@ export default async function initiateUserAuthorization() {
     const oAuth2Client = getOAuthClient()
     const SCOPES = [
       'https://www.googleapis.com/auth/tasks',
-      'https://www.googleapis.com/auth/calendar'
+      'https://www.googleapis.com/auth/calendar.events'
     ]
     const authUrl = oAuth2Client.generateAuthUrl({
       access_type: 'offline',

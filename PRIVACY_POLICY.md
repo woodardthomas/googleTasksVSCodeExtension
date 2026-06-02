@@ -43,7 +43,7 @@ The Extension uses OAuth 2.0 to securely authenticate with Google Services:
 The Extension requests the following Google API scopes:
 
 - `https://www.googleapis.com/auth/tasks` - To manage your Google Tasks (create, read, update, delete)
-- `https://www.googleapis.com/auth/calendar` - To access your Google Calendar for viewing tasks alongside calendar events
+- `https://www.googleapis.com/auth/calendar.events` - To access your Google Calendar for viewing tasks alongside calendar events
 
 We request only the minimum permissions necessary to provide the Extension's functionality.
 
